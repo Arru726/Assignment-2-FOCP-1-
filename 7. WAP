@@ -1,0 +1,16 @@
+//7. WAP to check whether score is even or odd in an array
+
+  void checkEvenOdd(int marks[], int size) {
+  for (int i = 0; i < size; i++) {
+  if (marks[i] % 2 == 0)
+  printf("Marks %d is Even\n", marks[i]);
+  else
+  printf("Marks %d is Odd\n", marks[i]);
+}
+}
+  int main() {
+  int marks[] = {77, 64, 44, 99};
+  int size = sizeof(marks) / sizeof(marks[0]);
+  checkEvenOdd(marks, size);
+  return 0;
+}
