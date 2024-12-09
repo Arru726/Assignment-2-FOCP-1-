@@ -1,0 +1,16 @@
+//9. WAP to find a peak element which is not smaller than its neighbors.
+
+  void findPeak(int arr[], int n) {
+  for (int i = 0; i < n; i++) {
+  if ((i == 0 || arr[i] >= arr[i - 1]) && (i == n - 1 || arr[i] >= arr[i + 1])) {
+  printf("Peak Element: %d\n", arr[i]);
+  return;
+}
+}
+}
+  int main() {
+  int arr[] = {5, 9, 36, 23, 11, 20};
+  int n = sizeof(arr) / sizeof(arr[0]);
+  findPeak(arr, n);
+  return 0;
+}
