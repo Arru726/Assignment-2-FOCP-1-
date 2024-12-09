@@ -1,0 +1,31 @@
+// 2. WAP to print grades of students as per their marks given in a n array.
+
+
+  void printGrade(int mark) {
+  if (mark >= 75) {
+  printf("Grade A\n");
+  } else if (mark >= 60 && mark<=74) {
+  printf("Grade B\n");
+  } else if (mark >= 40 && mark<=59) {
+  printf("Grade C\n");
+  } else {
+  printf("Grade D\n");
+}
+}
+  int main() {
+  int students, i;
+  printf("Enter the number of students: ");
+  scanf("%d", &students);
+  int marks[students];
+  printf("Enter the marks of %d students:\n", students);
+  for (i = 0; i < students; i++) {
+  printf("Student %d: ", i + 1);
+  scanf("%d", &marks[i]);
+}
+  printf("\nGrades of students:\n");
+  for (i = 0; i < students; i++) {
+  printf("Student %d: ", i + 1);
+  printGrade(marks[i]);
+}
+  return 0;
+}
