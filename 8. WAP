@@ -1,0 +1,17 @@
+// 8. WAP to find maximum & minimum score in the Marks array
+
+  void findMaxMin(int marks[], int size) {
+  int max = marks[0], min = marks[0];
+  for (int i = 1; i < size; i++) {
+  if (marks[i] > max) max = marks[i];
+  if (marks[i] < min) min = marks[i];
+}
+  printf("Maximum score: %d\n", max);
+  printf("Minimum score: %d\n", min);
+}
+  int main() {
+  int marks[] = {45, 67, 89, 23};
+  int size = sizeof(marks) / sizeof(marks[0]);
+  findMaxMin(marks, size);
+  return 0;
+}
